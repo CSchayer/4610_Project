@@ -2,13 +2,15 @@
  * Created by chrisschayer on 11/15/17.
  */
 $(document).ready(function(){
-    $("#flight-form").submit(function (event) {
+    $("#flight-form-submit").submit(function (event) {
 
         event.preventDefault();
         // var data = options selected
         var startTime = $('#start').val();
         var endTime = $('#end').val();
-        $.ajax({
+        var locations=$('#cities').val();
+        console.log(locations);
+        /*$.ajax({
             url: 'flight suggester',
             method: get,
             data: {
@@ -24,7 +26,7 @@ $(document).ready(function(){
                     alert("Some exception has occured please try again.");
                 }
             }
-        });
+        });*/
     });
     $('#cities').multiselect({nonSelectedText:"All"});
    map = new GMaps({
@@ -39,7 +41,11 @@ $(document).ready(function(){
             style: 'SMALL',
             position: 'TOP_LEFT'
         },
-        panControl: false
+        panControl: false,
+        resize:function(e){
+
+       }
+
     });
     
     //$('#map').hide();
