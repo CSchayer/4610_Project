@@ -13,15 +13,15 @@ $(document).ready(function(){
         var precip = $('#rain-percent').val();
 
         $.ajax({
-            url: '/warfile/servlet',
-            method: get,
+            url: '/forecastServlet/forecast',
+            method: 'GET',
             data: {
-                locations:'',
+                //locations:locations,
                 startTime:String(startTime),
                 endTime:String(endTime),
                 percent:String(precip)
             },
-            dataType:'json',
+            dataType:'multipart/form-data',
             success: function (results) {
                 if (results != null && results != "") {
 
