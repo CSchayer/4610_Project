@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,14 +83,14 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a id="FS" href="#"><i class="fa fa-fw fa-dashboard"></i> Flight Suggester</a>
+                    <li>
+                        <a id="FS" class="contentBar" href="#"><i class="fa fa-fw fa-dashboard"></i> Flight Suggester</a>
                     </li>
                     <li>
-                        <a id="VerFlight" href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Verifying Flights</a>
+                        <a id="VerFlight" class="contentBar" href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Verifying Flights</a>
                     </li>
                     <li>
-                        <a id="APRS" href="#"><i class="fa fa-fw fa-table"></i> Utilizing APRS</a>
+                        <a id="APRS" class="contentBar" href="#"><i class="fa fa-fw fa-table"></i> Utilizing APRS</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Useful Tools <i class="fa fa-fw fa-caret-down"></i></a>
@@ -109,9 +109,10 @@
         </nav>
 
         <div id="page-wrapper">
+            <div id="instructionWrapper" class="container-fluid mainContent">
 
-            <div id="mapWrapper" class="container-fluid">
-
+            </div>
+            <div id="mapWrapper"  style="display:none;" class="container-fluid mainContent">
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="panel panel-default">
